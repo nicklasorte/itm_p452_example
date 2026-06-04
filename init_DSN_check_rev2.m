@@ -55,7 +55,7 @@ TxLon1 = -116.8895;
 TxHtm1 = 73;  %%%%%%%Meters
 
 max_dist_km=500;
-num_dist_steps=100;
+num_dist_steps=500;
 [array_RxLat,array_RxLon]=track1(TxLat1,TxLon1,90,km2deg(max_dist_km),[],[],num_dist_steps);
 array_RxLat(1)=[];
 array_RxLon(1)=[];
