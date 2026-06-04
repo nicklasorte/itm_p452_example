@@ -3,7 +3,6 @@ clc;
 close all;
 app=NaN(1);
 format shortG
-
 folder1='C:\Users\nlasorte\OneDrive - National Telecommunications and Information Administration\MATLAB2024\7GHz P2P-DSN';  %%%%%%%Change this to where you put this matlab file
 cd(folder1)
 addpath(folder1)
@@ -70,12 +69,15 @@ array_TxLon=ones(size(array_RxLat))*TxLon1;
 array_TxHtm=ones(size(array_RxLat))*TxHtm1;
 
 
-% figure;
-% geoplot(array_RxLat,array_RxLon,'or')
-% hold on;
-% geoplot(TxLat1,TxLon1,'sb')
-% grid on;
-% pause(0.1)
+figure;
+geoplot(array_RxLat,array_RxLon,'or')
+hold on;
+geoplot(TxLat1,TxLon1,'sb')
+grid on;
+pause(1)
+saveas(gcf, char(strcat('Points_Maps.png')))
+pause(0.1)
+
 
 
 Gt = 0;              % TX antenna gain (dBi)
