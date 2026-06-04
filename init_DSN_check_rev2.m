@@ -138,7 +138,11 @@ for i=1:1:num_pts
     end
 
 end
-horzcat(dist_array',array_dBloss)
+table1=array2table(horzcat(dist_array',array_dBloss));
+table1=renamevars(table1, ["Var1", "Var2","Var3"], ["Distance_km", "ITM_Pathloss_dB","P452_Pathloss_dB"])
+tic;
+writetable(table1, strcat('Pathloss_ITM_p452.csv'));
+toc;
 
 
 figure;
